@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header style={headerStyle}>
             <h1>
-                Groceries
+                Groceries List
             </h1>
         </header>    
     )
