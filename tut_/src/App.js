@@ -6,10 +6,7 @@ import Footer from './Footer';
 
 
 function App() {
-
-  // const name = 'Wanyua'
   
-
 
   return (
     <div className="App">
