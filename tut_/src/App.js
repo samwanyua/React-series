@@ -5,29 +5,17 @@ import AddItem from './AddItem';
 import Content from './Content';
 import Footer from './Footer';
 import { useState } from "react"
+import SearchItem from './SearchItem';
+
 
 // Controlled inputs -> inputs in react forms
 
 function App() {
-  const [items, setItems] = useState([
-    {
-      id: 1,
-      checked: false,
-      item: "One half pound bag of Cocoa Covered Almonds Unsalted"
-    },
-    {
-      id: 2,
-      checked: false,
-      item: "Item 2"
-    },
-    {
-      id: 3,
-      checked: false,
-      item: "Item 3"
-    }
-  ]);
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')));
 
   const [newItem, setNewItem] =useState('')
+
+  const [search, setSearch] = useState('')
 
   const setAndSaveItems = (newItems) => {
     setItems(newItems)
@@ -76,6 +64,10 @@ function App() {
         newItem = {newItem}
         setNewItem = {setNewItem}
         handleSubmit = {handleSubmit}
+     />
+     <SearchItem 
+        search={search}
+        setSearch = {setSearch}
      />
      <Content 
         items = {items}
