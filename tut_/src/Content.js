@@ -8,7 +8,7 @@ const Content = ({items, handleCheck, handleDelete}) => {
         <ItemList
             items = {items}
             handleCheck={handleCheck}
-            handleDelete={handleCheck}
+            handleDelete={handleDelete}
         />
       ) : (
         <p style={{marginTop: '2rem'}}>

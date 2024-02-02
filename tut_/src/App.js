@@ -5,7 +5,7 @@ import Content from './Content';
 import Footer from './Footer';
 import { useState } from "react"
 
-
+// Controlled inputs -> inputs in react forms
 
 function App() {
   const [items, setItems] = useState([
@@ -28,7 +28,7 @@ function App() {
 
   const handleCheck = (id) => {
     // console.log(`key: ${id}`)
-    const listItems = items.map((item) => item.id == id ? {...item, checked: !item.checked} : item);
+    const listItems = items.map((item) => item.id === id ? {...item, checked: !item.checked} : item);
     setItems(listItems)
     localStorage.setItem('shoppinglist', JSON.stringify(listItems))
   }
